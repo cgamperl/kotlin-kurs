@@ -1,0 +1,11 @@
+# Deterministic line endings across Windows, macOS and Linux.
+* text=auto eol=lf
+
+# Windows batch files must keep CRLF.
+*.bat text eol=crlf
+
+# The Gradle wrapper script must stay LF - with CRLF it fails on
+# Linux and macOS with "bad interpreter".
+gradlew text eol=lf
+
+*.jar binary
