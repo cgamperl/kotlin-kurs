@@ -79,23 +79,22 @@ class E2DispatchersTest {
         assertEquals(checksumBlocking("cam-04"), checksum("cam-04"))
     }
 
+    /**
+     * The decisive test for 2c.
+     *
+     * The checksum completes within a few milliseconds, too quickly for a
+     * timer-based check. The child coroutine is queued on the event loop of
+     * `runBlocking` before `checksum` is called, so it runs only if
+     * `checksum` suspends and releases the thread. A blocking implementation
+     * returns before the child has been dispatched.
+     */
     @Test
     fun `does not block the calling thread while computing`() = runBlocking {
-        var ticks = 0
-
-        val ticker = launch {
-            while (isActive) {
-                delay(10.milliseconds)
-                ticks++
-            }
-        }
+        var childRan = false
+        launch { childRan = true }
 
         checksum("cam-04")
-        ticker.cancel()
 
-        assertTrue(
-            ticks > 0,
-            "the CPU-bound work blocked the calling thread",
-        )
+        assertTrue(childRan, "the CPU-bound work blocked the calling thread")
     }
 }
