@@ -8,7 +8,7 @@ import kotlin.system.measureTimeMillis
 import kotlin.time.Duration.Companion.seconds
 
 /**
- * Demo 1 – Why coroutines?
+ * Demo 1 - Why coroutines?
  *
  * A JVM platform thread reserves around 1 MB of stack and switching
  * between threads goes through the kernel. A coroutine is an object on
@@ -25,7 +25,7 @@ private const val FAIR_COUNT = 10_000
 private const val LARGE_COUNT = 200_000
 
 fun main() {
-    println("Part 1 – same workload, $FAIR_COUNT tasks each waiting one second\n")
+    println("Part 1 - same workload, $FAIR_COUNT tasks each waiting one second\n")
 
     val coroutineMillis = withCoroutines(FAIR_COUNT)
     val threadMillis = withThreads(FAIR_COUNT)
@@ -56,7 +56,7 @@ fun main() {
 
             delay() SUSPENDS the coroutine, Thread.sleep() BLOCKS the thread.
 
-        Everything else – dispatchers, scopes, cancellation – follows from
+        Everything else - dispatchers, scopes, cancellation - follows from
         that distinction.
         """.trimIndent()
     )
@@ -105,7 +105,7 @@ private fun withThreads(count: Int): Long {
  * feasibility.
  */
 private fun scaleUp() {
-    println("\nPart 2 – $LARGE_COUNT coroutines (the thread version is not even attempted)\n")
+    println("\nPart 2 - $LARGE_COUNT coroutines (the thread version is not even attempted)\n")
 
     val millis = withCoroutines(LARGE_COUNT)
     println("coroutines: $LARGE_COUNT tasks in $millis ms")

@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 3 – Idioms: a refactoring.
+ * Exercise 3 - Idioms: a refactoring.
  *
  * This code WORKS. The tests are green from the start.
  *
@@ -19,7 +19,7 @@ package exercise
  */
 
 /**
- * 3a – if/else cascade -> `when` as an expression.
+ * 3a - if/else cascade -> `when` as an expression.
  */
 fun level(utilisation: Int): String {
     if (utilisation < 10) {
@@ -34,7 +34,7 @@ fun level(utilisation: Int): String {
 }
 
 /**
- * 3b – StringBuilder -> string template.
+ * 3b - StringBuilder -> string template.
  */
 fun format(name: String, port: Int): String {
     val sb = StringBuilder()
@@ -46,7 +46,7 @@ fun format(name: String, port: Int): String {
 }
 
 /**
- * 3c – three overloads -> one function with default arguments.
+ * 3c - three overloads -> one function with default arguments.
  *
  * Careful: after the rewrite there must be only ONE function
  * `connectionUrl`. The tests call it with one, two and three arguments.
@@ -64,7 +64,7 @@ fun connectionUrl(host: String, port: Int, protocol: String): String {
 }
 
 /**
- * 3d – a chain of comparisons with && -> a range with `in`.
+ * 3d - a chain of comparisons with && -> a range with `in`.
  */
 fun isWithinNormalBand(utilisation: Int): Boolean {
     if (utilisation >= 10 && utilisation <= 90) {
@@ -74,7 +74,7 @@ fun isWithinNormalBand(utilisation: Int): Boolean {
 }
 
 /**
- * 3e – nested null checks -> safe call, takeIf and Elvis.
+ * 3e - nested null checks -> safe call, takeIf and Elvis.
  */
 fun cleanName(input: String?): String {
     if (input == null) {
@@ -88,7 +88,7 @@ fun cleanName(input: String?): String {
 }
 
 /**
- * 3f – `var` with a later assignment -> `if` as an expression and `val`.
+ * 3f - `var` with a later assignment -> `if` as an expression and `val`.
  */
 fun installationSize(channels: Int): String {
     var description: String

@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 4 – Immutability.
+ * Demo 4 - Immutability.
  *
  * Two levels that get mixed up regularly:
  *   1. val / var          -> may the REFERENCE be reassigned?

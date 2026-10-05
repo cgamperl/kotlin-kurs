@@ -15,13 +15,13 @@ import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 
 /**
- * Demo 1 – Exception handling in coroutines.
+ * Demo 1 - Exception handling in coroutines.
  *
  * The rule that explains almost everything:
  *
- *   `launch` treats an exception as a FAILURE – it propagates up the job
+ *   `launch` treats an exception as a FAILURE - it propagates up the job
  *           hierarchy immediately and cancels the siblings.
- *   `async` treats an exception as a RESULT – it is stored in the Deferred
+ *   `async` treats an exception as a RESULT - it is stored in the Deferred
  *           and rethrown when you call `await()`.
  */
 
@@ -45,7 +45,7 @@ fun main() = runBlocking {
  * happens. A try/catch inside a coroutine works exactly as expected.
  */
 private suspend fun tryCatchInsideTheCoroutine() = coroutineScope {
-    println("— try/catch inside —")
+    println("- try/catch inside -")
 
     launch {
         try {
@@ -67,7 +67,7 @@ private suspend fun failingCall(): Nothing {
  * the Deferred until somebody awaits it.
  */
 private suspend fun asyncStoresTheException() {
-    println("— async: the exception waits for await() —")
+    println("- async: the exception waits for await() -")
 
     supervisorScope {
         val deferred = async { failingCall() }
@@ -92,7 +92,7 @@ private suspend fun asyncStoresTheException() {
  * not - `launch` itself returns long before the failure happens.
  */
 private suspend fun launchPropagatesImmediately() {
-    println("— launch: propagates immediately —")
+    println("- launch: propagates immediately -")
 
     try {
         coroutineScope {
@@ -115,7 +115,7 @@ private suspend fun launchPropagatesImmediately() {
 // ------------------------------------------------------------------ 4
 /**
  * A `CoroutineExceptionHandler` is the last resort for coroutines that
- * nobody awaits – the equivalent of an uncaught exception handler.
+ * nobody awaits - the equivalent of an uncaught exception handler.
  *
  * Two things surprise people:
  *   - it only works for `launch`, never for `async` (there the exception
@@ -123,7 +123,7 @@ private suspend fun launchPropagatesImmediately() {
  *   - it only works on a ROOT coroutine, not on a nested child `launch`
  */
 private suspend fun exceptionHandler() {
-    println("— CoroutineExceptionHandler —")
+    println("- CoroutineExceptionHandler -")
 
     val handler = CoroutineExceptionHandler { context, cause ->
         println("  handler: ${cause.message}")
@@ -147,7 +147,7 @@ private suspend fun exceptionHandler() {
  * failure is the right behaviour.
  */
 private suspend fun supervisorScopeIsolates() {
-    println("— supervisorScope —")
+    println("- supervisorScope -")
 
     // Inside supervisorScope each child is a ROOT coroutine as far as
     // exceptions are concerned. That is exactly why a handler works here
@@ -186,7 +186,7 @@ private suspend fun supervisorScopeIsolates() {
  * actually expect.
  */
 private suspend fun cancellationIsNotAFailure() = coroutineScope {
-    println("— CancellationException —")
+    println("- CancellationException -")
 
     val job = launch {
         try {

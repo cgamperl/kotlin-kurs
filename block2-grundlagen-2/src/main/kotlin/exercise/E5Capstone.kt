@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 5 – Block 2 capstone: telemetry analysis.
+ * Exercise 5 - Block 2 capstone: telemetry analysis.
  *
  * This is where everything from block 2 comes together: a generic result
  * type as a sealed interface, a generic function with a type bound,
@@ -24,7 +24,7 @@ data class Reading(
  * `AnalysisResult<Nothing>` and still be used wherever an
  * `AnalysisResult<X>` is expected: `Nothing` is a subtype of every type.
  *
- * Nothing to do here – this type is the basis for 5a through 5e.
+ * Nothing to do here - this type is the basis for 5a through 5e.
  */
 sealed interface AnalysisResult<out T> {
     data class Ok<T>(val value: T) : AnalysisResult<T>
@@ -32,7 +32,7 @@ sealed interface AnalysisResult<out T> {
 }
 
 /**
- * Exercise 5a – generic function with a type bound
+ * Exercise 5a - generic function with a type bound
  *
  * Returns the smallest and the largest element of a list as a pair.
  *
@@ -49,7 +49,7 @@ fun <T : Comparable<T>> span(values: List<T>): AnalysisResult<Pair<T, T>> {
 }
 
 /**
- * Exercise 5b – extension function using `windowed`
+ * Exercise 5b - extension function using `windowed`
  *
  * Moving average over the readings, using the given window size.
  * Four readings with a window size of 2 produce three averages.
@@ -63,13 +63,13 @@ fun List<Reading>.movingAverage(windowSize: Int): List<Double> {
 }
 
 /**
- * Exercise 5c – sequence
+ * Exercise 5c - sequence
  *
  * Finds the first `count` readings above the given threshold.
  *
  * The parameter is deliberately a `Sequence` and not a `List`: the source
  * may be very large or even infinite. Your solution must therefore NOT
- * materialise it with `toList()` first – it has to stop reading as soon
+ * materialise it with `toList()` first - it has to stop reading as soon
  * as enough matches have been found.
  *
  * One test verifies this using an infinite sequence.
@@ -79,7 +79,7 @@ fun Sequence<Reading>.firstAnomalies(threshold: Double, count: Int): List<Readin
 }
 
 /**
- * Exercise 5d – exhaustive `when` over the result type
+ * Exercise 5d - exhaustive `when` over the result type
  *
  * Produces a report line:
  *
@@ -93,7 +93,7 @@ fun reportLine(result: AnalysisResult<Pair<Double, Double>>): String {
 }
 
 /**
- * Exercise 5e – putting it together
+ * Exercise 5e - putting it together
  *
  * Analyses the readings per device and returns the span of each device's
  * values.

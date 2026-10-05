@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 6 – Visibility modifiers.
+ * Demo 6 - Visibility modifiers.
  *
  * Kotlin has four: public (the default), private, protected, internal.
  *

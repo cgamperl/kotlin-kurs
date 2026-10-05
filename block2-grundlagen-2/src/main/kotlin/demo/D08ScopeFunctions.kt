@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 8 – Scope functions: let, run, with, apply, also.
+ * Demo 8 - Scope functions: let, run, with, apply, also.
  *
  * At heart all five do the same thing: they run a block on an object.
  * They differ in exactly two answers:
@@ -50,7 +50,7 @@ fun main() {
 
 // ------------------------------------------------------------------ let
 private fun letExample() {
-    println("— let —")
+    println("- let -")
 
     // The most common use: run the block only when not null.
     val found: Device? = sampleDevices.firstOrNull { it.id == DeviceId("cam-04") }
@@ -71,7 +71,7 @@ private fun letExample() {
 
 // ------------------------------------------------------------------ run
 private fun runExample() {
-    println("— run —")
+    println("- run -")
 
     val device = sampleDevices[1]
 
@@ -93,7 +93,7 @@ private fun runExample() {
 
 // ----------------------------------------------------------------- with
 private fun withExample() {
-    println("— with —")
+    println("- with -")
 
     val device = sampleDevices[2]
 
@@ -110,7 +110,7 @@ private fun withExample() {
 
 // ---------------------------------------------------------------- apply
 private fun applyExample() {
-    println("— apply —")
+    println("- apply -")
 
     // The common case: configure an object and receive it back.
     // Without apply you would need a variable and four assignments below it.
@@ -129,7 +129,7 @@ private fun applyExample() {
 
 // ----------------------------------------------------------------- also
 private fun alsoExample() {
-    println("— also —")
+    println("- also -")
 
     // A side effect in the middle of a chain, without breaking it.
     // Typically logging or an intermediate check.
@@ -144,7 +144,7 @@ private fun alsoExample() {
 
 // --------------------------------------------------------------- choosing
 private fun whichOne() {
-    println("— how to choose —")
+    println("- how to choose -")
     println(
         """
         Do I need the object afterwards?

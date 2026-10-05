@@ -13,7 +13,7 @@ import kotlinx.coroutines.runBlocking
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
- * Demo 3 – Coroutine scope.
+ * Demo 3 - Coroutine scope.
  *
  * Every coroutine belongs to a scope. The scope answers one question:
  * **who waits for this coroutine, and who cancels it?**
@@ -39,7 +39,7 @@ fun main() = runBlocking {
  * inside is still running. No leaked background work.
  */
 private suspend fun coroutineScopeBuilder() {
-    println("— coroutineScope —")
+    println("- coroutineScope -")
 
     coroutineScope {
         launch {
@@ -50,7 +50,7 @@ private suspend fun coroutineScopeBuilder() {
             delay(100.milliseconds)
             println("  child B done")
         }
-        println("  block body reached its end – but the scope still waits")
+        println("  block body reached its end - but the scope still waits")
     }
 
     println("  after coroutineScope: everything really is finished")
@@ -58,7 +58,7 @@ private suspend fun coroutineScopeBuilder() {
 
 // ------------------------------------------------------------------ 2
 /**
- * A scope you own yourself – the pattern for a component with a lifecycle
+ * A scope you own yourself - the pattern for a component with a lifecycle
  * (a service, a connection, a screen).
  *
  * Two things matter:
@@ -93,7 +93,7 @@ private class DeviceMonitor {
 }
 
 private suspend fun ownScope() {
-    println("— your own scope —")
+    println("- your own scope -")
 
     val monitor = DeviceMonitor()
     monitor.start("cam-04")
@@ -120,11 +120,11 @@ private suspend fun ownScope() {
  */
 @OptIn(DelicateCoroutinesApi::class)
 private suspend fun globalScopeProblem() {
-    println("— GlobalScope (anti-pattern) —")
+    println("- GlobalScope (anti-pattern) -")
 
     GlobalScope.launch {
         delay(50.milliseconds)
-        println("  still running – nobody is waiting for me")
+        println("  still running - nobody is waiting for me")
     }
 
     println("  the function returns immediately, the coroutine keeps going")

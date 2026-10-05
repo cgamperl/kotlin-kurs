@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 9 – Context parameters.
+ * Demo 9 - Context parameters.
  *
  * A stable language feature since Kotlin 2.4; it needs NO compiler flag.
  *

@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 2 – dispatchers: keeping blocking work off the thread of the caller.
+ * Exercise 2 - dispatchers: keeping blocking work off the thread of the caller.
  *
  * The functions below are blocking. They stand in for what you really find
  * in a code base: a JDBC driver, a file read, a legacy library, an HTTP
@@ -9,7 +9,7 @@ package exercise
  *
  * Calling them straight from a coroutine is the single most common mistake
  * when starting with coroutines: the coroutine no longer suspends, it
- * blocks – and with it the thread, and with that thread everything else
+ * blocks - and with it the thread, and with that thread everything else
  * scheduled on it.
  *
  * Verify with:
@@ -60,7 +60,7 @@ suspend fun readConfigurations(deviceIds: List<String>): List<String> {
 /**
  * Exercise 2c
  *
- * Same idea for CPU-bound work – but a different dispatcher.
+ * Same idea for CPU-bound work - but a different dispatcher.
  *
  * Be aware of what the test can and cannot check: `Dispatchers.IO` and
  * `Dispatchers.Default` share the same thread pool, so the thread name

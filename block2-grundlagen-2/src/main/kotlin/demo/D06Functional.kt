@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 6 – Functional programming: the collections API and extensions.
+ * Demo 6 - Functional programming: the collections API and extensions.
  *
  * Two properties of the collections API are worth the attention:
  *

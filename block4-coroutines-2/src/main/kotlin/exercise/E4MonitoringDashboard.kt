@@ -3,7 +3,7 @@ package exercise
 import kotlinx.coroutines.flow.Flow
 
 /**
- * Exercise 4 – capstone project: the monitoring dashboard.
+ * Exercise 4 - capstone project: the monitoring dashboard.
  *
  * This is the project the block ends with. It pulls together everything:
  * concurrency, timeouts, partial failure, sealed state, flows, and a test

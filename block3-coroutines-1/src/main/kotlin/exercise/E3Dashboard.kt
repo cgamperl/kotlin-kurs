@@ -5,12 +5,12 @@ import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 
 /**
- * Exercise 3 (open) – a monitoring dashboard.
+ * Exercise 3 (open) - a monitoring dashboard.
  *
  * Everything from block 3 in one piece: several concurrent requests, a
  * scope that owns them, and a source that is allowed to be too slow.
  *
- * The result type is a sealed interface from block 2 – a device snapshot
+ * The result type is a sealed interface from block 2 - a device snapshot
  * is either complete or partial, and each variant carries exactly the data
  * that belongs to it.
  *
@@ -66,7 +66,7 @@ sealed interface DeviceSnapshot {
  *  - All three sources are queried AT THE SAME TIME. The slowest of them
  *    determines the duration, not their sum.
  *  - The temperature only gets `temperatureTimeoutMillis` to answer.
- *    If it takes longer, return a [DeviceSnapshot.Partial] – status and
+ *    If it takes longer, return a [DeviceSnapshot.Partial] - status and
  *    utilisation are still delivered.
  *
  * Useful: coroutineScope, async, withTimeoutOrNull
@@ -78,7 +78,7 @@ sealed interface DeviceSnapshot {
  *
  * the timeout cancels the WAITING, but not the request. The `async` is
  * still a child of the scope, and `coroutineScope` does not return until
- * all its children are done – so your function would still take the full
+ * all its children are done - so your function would still take the full
  * two seconds, and one of the tests will tell you so.
  *
  * Think about where the timeout really belongs.
@@ -93,7 +93,7 @@ suspend fun deviceSnapshot(
 /**
  * Exercise 3b
  *
- * A snapshot for every device – again all at the same time.
+ * A snapshot for every device - again all at the same time.
  * Order of results follows order of input.
  */
 suspend fun dashboard(

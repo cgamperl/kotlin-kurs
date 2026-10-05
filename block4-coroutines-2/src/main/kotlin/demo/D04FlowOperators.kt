@@ -25,7 +25,7 @@ import kotlin.system.measureTimeMillis
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
- * Demo 4 – Flow operators.
+ * Demo 4 - Flow operators.
  *
  * Most of these will look familiar from the collections API in block 2 -
  * `map`, `filter`, `take` do the same thing. Two groups are genuinely new:
@@ -61,7 +61,7 @@ fun main() = runBlocking {
 
 // ------------------------------------------------------------------ 1
 private suspend fun familiarOnes() {
-    println("— the familiar ones —")
+    println("- the familiar ones -")
 
     val result = sensorReadings()
         .map { it * 1.8 + 32 }              // to Fahrenheit
@@ -81,7 +81,7 @@ private suspend fun familiarOnes() {
 
 // ------------------------------------------------------------------ 2
 private suspend fun transformAndFold() {
-    println("— transform and running totals —")
+    println("- transform and running totals -")
 
     // transform is the general case: zero, one or many emissions per input.
     val flagged = sensorReadings(4)
@@ -103,7 +103,7 @@ private suspend fun transformAndFold() {
 // ------------------------------------------------------------------ 3
 @OptIn(FlowPreview::class)
 private suspend fun aboutTime() {
-    println("— time —")
+    println("- time -")
 
     // Worth knowing: debounce is still marked @FlowPreview, hence the
     // OptIn above. Most Flow operators are stable; the time-based ones
@@ -125,7 +125,7 @@ private suspend fun aboutTime() {
 
 // ------------------------------------------------------------------ 4
 private suspend fun aboutContext() {
-    println("— context and backpressure —")
+    println("- context and backpressure -")
 
     // flowOn changes the dispatcher of everything UPSTREAM of it.
     // The collector stays where it is. This is how you keep a slow
@@ -152,7 +152,7 @@ private suspend fun aboutContext() {
 
 // ------------------------------------------------------------------ 5
 private suspend fun errorHandling() {
-    println("— errors —")
+    println("- errors -")
 
     var attempt = 0
     val flaky = flow {
@@ -181,7 +181,7 @@ private suspend fun errorHandling() {
 
 // ------------------------------------------------------------------ 6
 private suspend fun combiningFlows() {
-    println("— combining —")
+    println("- combining -")
 
     val temperature = flow {
         delay(30.milliseconds); emit(21.0)

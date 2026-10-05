@@ -16,7 +16,7 @@ import kotlinx.coroutines.runBlocking
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
- * Demo 3 – Flow basics.
+ * Demo 3 - Flow basics.
  *
  * A `suspend` function returns ONE value, eventually.
  * A `Flow` returns MANY values, over time.
@@ -43,7 +43,7 @@ fun main() = runBlocking {
  * not at all without one.
  */
 private suspend fun coldByDefault() {
-    println("— cold —")
+    println("- cold -")
 
     val readings: Flow<Double> = flow {
         println("  flow body starts")
@@ -65,7 +65,7 @@ private suspend fun coldByDefault() {
 
 // ------------------------------------------------------------------ 2
 private suspend fun buildingFlows() {
-    println("— ways to build a flow —")
+    println("- ways to build a flow -")
 
     // From fixed values
     println("  flowOf: ${flowOf(1, 2, 3).toList()}")
@@ -90,7 +90,7 @@ private suspend fun buildingFlows() {
  * Everything else only describes what should happen.
  */
 private suspend fun terminalOperators() {
-    println("— terminal operators —")
+    println("- terminal operators -")
 
     val temperatures = flow {
         repeat(5) { i ->
@@ -122,7 +122,7 @@ private suspend fun terminalOperators() {
  * Block 4 only introduces them; they matter most in UI work.
  */
 private suspend fun hotFlows() = coroutineScope {
-    println("— hot flows —")
+    println("- hot flows -")
 
     // StateFlow
     val deviceState = MutableStateFlow("offline")

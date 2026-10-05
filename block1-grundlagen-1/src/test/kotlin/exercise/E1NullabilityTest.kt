@@ -83,18 +83,18 @@ class E1NullabilityTest {
     @Test
     fun `assembles the description with a temperature`() {
         val rawData = mapOf("name" to "  Camera Studio B  ", "temperature" to "42.5", "port" to "9100")
-        assertEquals("Camera Studio B (port 9100) – 42.5 °C", describe(rawData))
+        assertEquals("Camera Studio B (port 9100) - 42.5 °C", describe(rawData))
     }
 
     @Test
     fun `assembles the description without a temperature`() {
         val rawData = mapOf("name" to "Router Control Room 1", "port" to "9100")
-        assertEquals("Router Control Room 1 (port 9100) – no reading", describe(rawData))
+        assertEquals("Router Control Room 1 (port 9100) - no reading", describe(rawData))
     }
 
     @Test
     fun `falls back to every default`() {
-        assertEquals("unknown device (port 9000) – no reading", describe(emptyMap()))
+        assertEquals("unknown device (port 9000) - no reading", describe(emptyMap()))
     }
 
     // ------------------------------------------------------------ style rule

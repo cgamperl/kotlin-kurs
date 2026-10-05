@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 4 – Object declarations and companion objects.
+ * Demo 4 - Object declarations and companion objects.
  *
  * `object` covers three things that other languages need three separate
  * constructs for: singleton, static members, and anonymous class.

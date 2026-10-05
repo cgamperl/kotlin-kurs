@@ -15,14 +15,14 @@ import kotlin.coroutines.coroutineContext
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
- * Demo 5 – Structured concurrency.
+ * Demo 5 - Structured concurrency.
  *
  * Three rules. Everything else follows from them:
  *
  *   1. Every coroutine has a parent (the scope it was started in).
  *   2. A parent does not complete before all its children have completed.
  *   3. Cancelling a parent cancels all its children. A failing child
- *      cancels its parent – and through it, its siblings.
+ *      cancels its parent - and through it, its siblings.
  *
  * The hierarchy as a diagram:
  *
@@ -49,7 +49,7 @@ fun main() = runBlocking {
 
 // ------------------------------------------------------------------ 1
 private suspend fun parentWaitsForChildren() = coroutineScope {
-    println("— a parent waits —")
+    println("- a parent waits -")
 
     launch {
         delay(100.milliseconds)
@@ -67,12 +67,12 @@ private suspend fun parentWaitsForChildren() = coroutineScope {
         println("  child B done")
     }
 
-    println("  end of the block – but coroutineScope still waits")
+    println("  end of the block - but coroutineScope still waits")
 }
 
 // ------------------------------------------------------------------ 2
 private suspend fun cancellationTravelsDown() = coroutineScope {
-    println("— cancellation travels down —")
+    println("- cancellation travels down -")
 
     val parent = launch {
         launch {
@@ -99,12 +99,12 @@ private suspend fun cancellationTravelsDown() = coroutineScope {
 
 // ------------------------------------------------------------------ 3
 /**
- * A failing child cancels its parent – and the parent then cancels the
+ * A failing child cancels its parent - and the parent then cancels the
  * siblings. That is intentional: if part of a joint computation has
  * failed, the rest of it is usually pointless.
  */
 private suspend fun failureTravelsUp() {
-    println("— a failure cancels the siblings —")
+    println("- a failure cancels the siblings -")
 
     try {
         coroutineScope {
@@ -125,7 +125,7 @@ private suspend fun failureTravelsUp() {
         println("  caught at the scope: ${e.message}")
     }
 
-    println("  the sibling was cancelled as well – note it stopped before step 9")
+    println("  the sibling was cancelled as well - note it stopped before step 9")
 }
 
 // ------------------------------------------------------------------ 4
@@ -134,11 +134,11 @@ private suspend fun failureTravelsUp() {
  * child no longer cancels its parent, and therefore not its siblings
  * either. Cancellation from the parent downwards still works.
  *
- * Use it wherever the children are genuinely independent – several device
+ * Use it wherever the children are genuinely independent - several device
  * monitors, several subscriptions.
  */
 private suspend fun supervisorJobIsolatesFailure() {
-    println("— SupervisorJob —")
+    println("- SupervisorJob -")
 
     // Without a handler the failure of monitor 1 would reach the default
     // handler of the thread and print a raw stack trace. Exception handling

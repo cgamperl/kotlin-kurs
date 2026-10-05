@@ -3,11 +3,11 @@ package demo
 import kotlin.properties.Delegates
 
 /**
- * Demo 7 – Delegation.
+ * Demo 7 - Delegation.
  *
  * Two different things share the name:
- *   1. interface delegation (class X : I by y)      – composition without boilerplate
- *   2. property delegation  (val x by lazy { ... }) – handing access to another object
+ *   1. interface delegation (class X : I by y)      - composition without boilerplate
+ *   2. property delegation  (val x by lazy { ... }) - handing access to another object
  */
 
 interface DeviceSource {
@@ -77,21 +77,21 @@ fun main() {
         Device(DeviceId("rtr-01"), "Router Control Room 1", DeviceType.ROUTER),
     )
 
-    println("— interface delegation —")
+    println("- interface delegation -")
     val source: DeviceSource = LoggingDeviceSource(InMemoryDeviceSource(devices))
     println(source.find(DeviceId("rtr-01")))
     // all() was never implemented and works anyway:
     println("forwarded: ${source.all().size} devices")
 
     println()
-    println("— by lazy —")
+    println("- by lazy -")
     val diagnostics = Diagnostics()
     println("the object exists, nothing has been computed yet.")
     println("first access:  ${diagnostics.expensiveMetric}")
     println("second access: ${diagnostics.expensiveMetric}")   // no recomputation
 
     println()
-    println("— observable / vetoable —")
+    println("- observable / vetoable -")
     diagnostics.status = "online"
     diagnostics.status = "maintenance"
 

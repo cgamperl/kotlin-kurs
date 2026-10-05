@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 9 – Sequences vs. collections (lazy evaluation).
+ * Demo 9 - Sequences vs. collections (lazy evaluation).
  *
  * The collection operations are **eager**: every step of a chain
  * immediately produces a complete new list. Three operations over a
@@ -31,7 +31,7 @@ fun main() {
 private fun makeTheOrderVisible() {
     val numbers = listOf(1, 2, 3, 4)
 
-    println("— list (eager) —")
+    println("- list (eager) -")
     numbers
         .map { println("  map $it"); it * 2 }
         .filter { println("  filter $it"); it > 4 }
@@ -39,7 +39,7 @@ private fun makeTheOrderVisible() {
     // Output: ALL maps first, then ALL filters, then all results.
 
     println()
-    println("— sequence (on demand) —")
+    println("- sequence (on demand) -")
     numbers.asSequence()
         .map { println("  map $it"); it * 2 }
         .filter { println("  filter $it"); it > 4 }
@@ -54,7 +54,7 @@ private fun makeTheOrderVisible() {
  * enough elements.
  */
 private fun shortCircuiting() {
-    println("— short circuiting —")
+    println("- short circuiting -")
 
     val devices = sampleDevices
 
@@ -82,7 +82,7 @@ private fun shortCircuiting() {
  * Something lists fundamentally cannot do: infinite series.
  */
 private fun infiniteSequences() {
-    println("— infinite series —")
+    println("- infinite series -")
 
     val samplingPoints = generateSequence(0) { it + 5 }        // 0, 5, 10, 15, …
     println(samplingPoints.take(6).toList())
@@ -104,7 +104,7 @@ private fun infiniteSequences() {
 
 // ------------------------------------------------------------------ 4
 private fun measuring() {
-    println("— measuring —")
+    println("- measuring -")
 
     val large = (1..2_000_000).toList()
 
@@ -123,7 +123,7 @@ private fun measuring() {
     val small = (1..20).toList()
     val (_, smallList) = measure { small.map { it * 2 }.filter { it % 3 == 0 } }
     val (_, smallSequence) = measure { small.asSequence().map { it * 2 }.filter { it % 3 == 0 }.toList() }
-    println("small, fully consumed – list: $smallList ms, sequence: $smallSequence ms")
+    println("small, fully consumed - list: $smallList ms, sequence: $smallSequence ms")
 }
 
 private inline fun <T> measure(block: () -> T): Pair<T, Double> {
@@ -134,7 +134,7 @@ private inline fun <T> measure(block: () -> T): Pair<T, Double> {
 
 // ------------------------------------------------------------------ 5
 private fun whenIsItWorthIt() {
-    println("— rules of thumb —")
+    println("- rules of thumb -")
     println(
         """
         Reach for a sequence when:

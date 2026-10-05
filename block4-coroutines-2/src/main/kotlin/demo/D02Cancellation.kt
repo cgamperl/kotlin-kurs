@@ -19,7 +19,7 @@ import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 
 /**
- * Demo 2 – Cancellation.
+ * Demo 2 - Cancellation.
  *
  * The one sentence to remember: **cancellation is cooperative.**
  *
@@ -51,7 +51,7 @@ fun main() = runBlocking {
  * has been cancelled. This is a frequent source of errors in practice.
  */
 private suspend fun theUncancellableLoop() = coroutineScope {
-    println("— a loop that ignores cancellation —")
+    println("- a loop that ignores cancellation -")
 
     // Dispatchers.Default matters here: on the single-threaded event loop
     // of runBlocking this busy loop would block the very coroutine that is
@@ -74,7 +74,7 @@ private suspend fun theUncancellableLoop() = coroutineScope {
 
 // ------------------------------------------------------------------ 2
 private suspend fun makingItCooperative() = coroutineScope {
-    println("— three ways to cooperate —")
+    println("- three ways to cooperate -")
 
     // a) isActive - check and leave on your own terms
     val a = launch(Dispatchers.Default) {
@@ -117,7 +117,7 @@ private suspend fun makingItCooperative() = coroutineScope {
  * needs to suspend has to be wrapped in `NonCancellable`.
  */
 private suspend fun cleanupOnCancellation() = coroutineScope {
-    println("— cleanup —")
+    println("- cleanup -")
 
     val job = launch {
         try {
@@ -141,7 +141,7 @@ private suspend fun cleanupOnCancellation() = coroutineScope {
 
 // ------------------------------------------------------------------ 4
 private suspend fun timeouts() = coroutineScope {
-    println("— timeouts —")
+    println("- timeouts -")
 
     // withTimeoutOrNull: null instead of an exception. Usually what you want.
     val result = withTimeoutOrNull(200.milliseconds) {

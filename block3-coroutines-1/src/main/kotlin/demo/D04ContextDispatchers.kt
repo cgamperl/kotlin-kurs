@@ -12,7 +12,7 @@ import kotlin.system.measureTimeMillis
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
- * Demo 4 – Coroutine context and dispatchers.
+ * Demo 4 - Coroutine context and dispatchers.
  *
  * The context is a set of elements attached to a coroutine: its Job, its
  * dispatcher, optionally a name and an exception handler. Children inherit
@@ -24,7 +24,7 @@ import kotlin.time.Duration.Companion.milliseconds
  *   Dispatchers.IO         blocking I/O. Large, elastic pool (64+ threads).
  *   Dispatchers.Unconfined starts on the calling thread, resumes wherever
  *                          the suspending call resumed. Rarely what you want.
- *   Dispatchers.Main       UI thread – only on Android/JavaFX/Swing.
+ *   Dispatchers.Main       UI thread - only on Android/JavaFX/Swing.
  *
  * Tip for running this in the course: add the VM option
  * `-Dkotlinx.coroutines.debug` and the thread names also carry the
@@ -47,7 +47,7 @@ fun main() = runBlocking {
 
 // ------------------------------------------------------------------ 1
 private suspend fun whichThread() = coroutineScope {
-    println("— which thread runs what —")
+    println("- which thread runs what -")
 
     here("runBlocking")
 
@@ -68,12 +68,12 @@ private suspend fun whichThread() = coroutineScope {
 /**
  * `withContext` switches the dispatcher for one block and switches back
  * afterwards. It is a suspend function, so it does not start a new
- * coroutine – it moves the current one.
+ * coroutine - it moves the current one.
  *
  * This is the idiomatic way to keep blocking work off the wrong pool.
  */
 private suspend fun switchingContext() = coroutineScope {
-    println("— withContext —")
+    println("- withContext -")
 
     here("before")
 
@@ -87,7 +87,7 @@ private suspend fun switchingContext() = coroutineScope {
 }
 
 /**
- * Deliberately blocking – it stands in for a legacy library, a JDBC
+ * Deliberately blocking - it stands in for a legacy library, a JDBC
  * driver or a file read. Such code belongs on Dispatchers.IO.
  */
 private fun readConfigurationBlocking(): String {
@@ -97,7 +97,7 @@ private fun readConfigurationBlocking(): String {
 
 // ------------------------------------------------------------------ 3
 private suspend fun naming() = coroutineScope {
-    println("— CoroutineName —")
+    println("- CoroutineName -")
 
     // Context elements are combined with `+`.
     launch(Dispatchers.Default + CoroutineName("poller")) {
@@ -111,11 +111,11 @@ private suspend fun naming() = coroutineScope {
  * Why the distinction between Default and IO is not cosmetic.
  *
  * Default has as many threads as there are CPU cores. If blocking calls
- * occupy those threads, everything else starves – including work that
+ * occupy those threads, everything else starves - including work that
  * would have plenty of CPU available.
  */
 private suspend fun whyIoIsDifferent() = coroutineScope {
-    println("— Default vs. IO for blocking work —")
+    println("- Default vs. IO for blocking work -")
 
     val cores = Runtime.getRuntime().availableProcessors()
     println("  cores available: $cores")

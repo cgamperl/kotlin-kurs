@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 1 – translating a class hierarchy to Kotlin.
+ * Exercise 1 - translating a class hierarchy to Kotlin.
  *
  * The original class hierarchy is printed in the module README. This file
  * is the Kotlin skeleton for it: classes, interfaces and signatures are
@@ -106,8 +106,8 @@ class Sensor(id: String, val unit: String) : Component(id), Calibratable {
  *
  * Produces an overview of all components, one line each:
  *
- *     Camera(cam-04) – maintenance every 6 months
- *     Sensor(sen-12) – maintenance every 24 months
+ *     Camera(cam-04) - maintenance every 6 months
+ *     Sensor(sen-12) - maintenance every 24 months
  *
  * The lines are joined with "\n".
  */

@@ -7,7 +7,7 @@ package demo
 fun main() {
     println(
         """
-        Block 1 – Setup & language basics I
+        Block 1 - Setup & language basics I
         ===================================
         D01ProjectSetupKt        project setup, top-level functions
         D02NullabilityKt         safe calls, Elvis, smart cast, !!

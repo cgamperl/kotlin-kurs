@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 5 – Data classes and value classes.
+ * Demo 5 - Data classes and value classes.
  *
  * This is where the model appears that accompanies us through the whole
  * course: devices and their readings.

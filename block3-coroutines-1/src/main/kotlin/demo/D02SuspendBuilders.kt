@@ -10,13 +10,13 @@ import kotlin.system.measureTimeMillis
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
- * Demo 2 – Suspend functions and coroutine builders.
+ * Demo 2 - Suspend functions and coroutine builders.
  *
  * Three builders cover almost everything:
  *
  *   runBlocking { }  bridges blocking and suspending code. Blocks the
  *                    current thread until the block is done. Use it in
- *                    main() and in tests – not in production code.
+ *                    main() and in tests - not in production code.
  *
  *   launch { }       fire and forget. Returns a Job, no result value.
  *
@@ -39,7 +39,7 @@ import kotlin.time.Duration.Companion.milliseconds
  * What the keyword really means: the compiler rewrites the function into
  * a state machine and adds a hidden `Continuation` parameter. That is why
  * a suspend function can only be called from a coroutine or from another
- * suspend function – the continuation has to come from somewhere.
+ * suspend function - the continuation has to come from somewhere.
  */
 suspend fun fetchDeviceStatus(deviceId: String): String {
     delay(300.milliseconds)                                  // stands in for network I/O
@@ -62,7 +62,7 @@ fun main() = runBlocking {
 // ------------------------------------------------------------------ 1
 // `coroutineScope` opens the scope that `launch` needs - see the note above.
 private suspend fun launchBuilder() = coroutineScope {
-    println("— launch —")
+    println("- launch -")
 
     // launch returns a Job. It is a handle, not a result.
     val job = launch {
@@ -79,7 +79,7 @@ private suspend fun launchBuilder() = coroutineScope {
 
 // ------------------------------------------------------------------ 2
 private suspend fun sequentialVersusParallel() = coroutineScope {
-    println("— sequential vs. parallel —")
+    println("- sequential vs. parallel -")
 
     // Plain suspend calls run one after the other. Two calls of 300 ms
     // each take 600 ms. This is not a flaw: it is what you want whenever
@@ -92,7 +92,7 @@ private suspend fun sequentialVersusParallel() = coroutineScope {
     println("  sequential: $sequential ms")
 
     // `async` starts both immediately; `await` collects the results.
-    // Note that both async calls happen BEFORE the first await – that is
+    // Note that both async calls happen BEFORE the first await - that is
     // what makes it parallel.
     val parallel = measureTimeMillis {
         val status = async { fetchDeviceStatus("cam-04") }
@@ -112,7 +112,7 @@ private suspend fun sequentialVersusParallel() = coroutineScope {
 
 // ------------------------------------------------------------------ 3
 private suspend fun awaitingMany() = coroutineScope {
-    println("— many at once —")
+    println("- many at once -")
 
     val deviceIds = listOf("cam-04", "cam-09", "rtr-01", "rtr-02", "int-07", "sen-12")
 

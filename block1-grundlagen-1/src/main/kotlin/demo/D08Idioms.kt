@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 8 – Kotlin idioms (collection).
+ * Demo 8 - Kotlin idioms (collection).
  *
  * Many small things that together make the difference between
  * "written in Kotlin" and "written in Java with Kotlin syntax".
@@ -91,8 +91,8 @@ private fun whenAsExpression() {
 
 // ---------------------------------------------------------------- 4
 private fun ranges() {
-    println((1..5).toList())            // 1, 2, 3, 4, 5   – inclusive
-    println((1..<5).toList())           // 1, 2, 3, 4      – exclusive
+    println((1..5).toList())            // 1, 2, 3, 4, 5   - inclusive
+    println((1..<5).toList())           // 1, 2, 3, 4      - exclusive
     println((1..10 step 3).toList())    // 1, 4, 7, 10
     println((5 downTo 1).toList())      // 5, 4, 3, 2, 1
 

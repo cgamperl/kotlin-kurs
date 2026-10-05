@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 7 – Lambda expressions.
+ * Demo 7 - Lambda expressions.
  *
  * The syntax is quickly explained. What is interesting are the rules
  * around it: the trailing lambda convention, `it`, function references -

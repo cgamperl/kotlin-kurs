@@ -17,7 +17,7 @@ import io.mockk.mockk
 import io.mockk.slot
 
 /**
- * Demo 5 – Unit testing with Kotest and MockK.
+ * Demo 5 - Unit testing with Kotest and MockK.
  *
  * These are DEMOS, not exercises: they are green and meant to be read and
  * run during the course.
@@ -26,9 +26,9 @@ import io.mockk.slot
  *
  * Kotest offers several "styles". Two are shown here:
  *
- *   StringSpec   – one string, one lambda. Shortest possible form.
- *   DescribeSpec – describe/it, nestable. Familiar to anyone who has
- *                  used Jasmine, Jest or RSpec.
+ *   StringSpec   - one string, one lambda. Shortest possible form.
+ *   DescribeSpec - describe/it, nestable; the structure used by Jasmine,
+ *                  Jest and RSpec.
  *
  * Both are ordinary classes; there are no annotations anywhere.
  */

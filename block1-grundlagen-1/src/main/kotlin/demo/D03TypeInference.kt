@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 3 – Type inference.
+ * Demo 3 - Type inference.
  *
  * A short topic, but with one team rule that carries:
  * let it be inferred locally, write it out on the public API.

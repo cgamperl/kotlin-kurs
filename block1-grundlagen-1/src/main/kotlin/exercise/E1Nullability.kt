@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 1 – Nullability.
+ * Exercise 1 - Nullability.
  *
  * The starting point: a device reports its telemetry as loose text values.
  * Fields may be missing, may be null, or may contain nonsense. Your job is
@@ -62,11 +62,11 @@ fun readPort(rawData: Map<String, String?>, default: Int = 9000): Int {
 /**
  * Builds a one-line description of this shape:
  *
- *     Camera Studio B (port 9100) – 42.5 °C
+ *     Camera Studio B (port 9100) - 42.5 °C
  *
  * When the temperature is missing, it says "no reading" instead:
  *
- *     Camera Studio B (port 9100) – no reading
+ *     Camera Studio B (port 9100) - no reading
  *
  * Use the three functions above.
  */

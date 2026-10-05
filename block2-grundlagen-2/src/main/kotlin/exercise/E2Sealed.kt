@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 2 – sealed classes: modelling states.
+ * Exercise 2 - sealed classes: modelling states.
  *
  * A device query goes through several states. Model them so that the
  * compiler checks every evaluation for completeness.

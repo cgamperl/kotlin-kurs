@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 2 – Enum classes.
+ * Demo 2 - Enum classes.
  *
  * Kotlin enums are fully fledged classes: they may have constructor
  * parameters, properties, methods, and even a separate implementation per

@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 3 – OOP in Kotlin.
+ * Demo 3 - OOP in Kotlin.
  *
  * The rule to keep in mind:
  * **classes and methods are final unless `open` says otherwise.**

@@ -37,7 +37,7 @@ import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 
 /**
- * Demo 6 – Testing coroutines.
+ * Demo 6 - Testing coroutines.
  *
  * The problem: `DeviceService.pingWithRetry` waits 1 s, then 2 s, then 3 s.
  * A test that actually waits six seconds is impractical to run.

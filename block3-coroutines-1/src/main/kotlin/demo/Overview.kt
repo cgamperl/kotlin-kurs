@@ -3,7 +3,7 @@ package demo
 fun main() {
     println(
         """
-        Block 3 – Coroutines I
+        Block 3 - Coroutines I
         ======================
         D01WhyCoroutinesKt         threads vs. coroutines, measured
         D02SuspendBuildersKt       suspend, runBlocking, launch, async/await

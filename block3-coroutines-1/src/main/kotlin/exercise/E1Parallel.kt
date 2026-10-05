@@ -4,7 +4,7 @@ import kotlinx.coroutines.delay
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
- * Exercise 1 (guided) – from sequential to parallel.
+ * Exercise 1 (guided) - from sequential to parallel.
  *
  * `fetchStatus` takes 200 ms per device. Asking six devices one after
  * another therefore takes 1.2 seconds, although the calls do not depend
@@ -19,7 +19,7 @@ val sampleDeviceIds = listOf("cam-04", "cam-09", "rtr-01", "rtr-02", "int-07", "
 /**
  * Stands in for a network call. Do not change this function.
  *
- * Note that it SUSPENDS (delay) rather than blocking (Thread.sleep) –
+ * Note that it SUSPENDS (delay) rather than blocking (Thread.sleep) -
  * that is what exercise 2 is about.
  */
 suspend fun fetchStatus(deviceId: String): String {
@@ -33,7 +33,7 @@ suspend fun fetchUtilisation(deviceId: String): Int {
 }
 
 /**
- * Given as a reference – this one is already correct, just slow.
+ * Given as a reference - this one is already correct, just slow.
  * Six devices, 200 ms each, roughly 1200 ms in total.
  */
 suspend fun collectStatusesSequentially(deviceIds: List<String>): List<String> =
@@ -56,8 +56,8 @@ suspend fun collectStatusesInParallel(deviceIds: List<String>): List<String> {
 /**
  * Exercise 1b
  *
- * Fetches status AND utilisation for a single device – both at the same
- * time – and combines them into one line:
+ * Fetches status AND utilisation for a single device - both at the same
+ * time - and combines them into one line:
  *
  *     "cam-04: online, utilisation 42"
  *
@@ -75,7 +75,7 @@ suspend fun deviceSummary(deviceId: String): String {
  * Exercise 1c
  *
  * A summary for every device, again all at once. Six devices, two calls
- * each – still roughly 200 ms in total.
+ * each - still roughly 200 ms in total.
  *
  * Reuse [deviceSummary].
  */

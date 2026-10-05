@@ -10,7 +10,7 @@ import io.mockk.mockk
 import kotlinx.coroutines.test.runTest
 
 /**
- * Exercise 3 – your own test suite for [AlarmService].
+ * Exercise 3 - your own test suite for [AlarmService].
  *
  * One worked example is given below. Add the rest.
  *

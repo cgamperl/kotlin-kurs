@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 2 – Data classes and value classes.
+ * Exercise 2 - Data classes and value classes.
  *
  * The goal: a small reading model that does not let invalid values come
  * into existence in the first place.

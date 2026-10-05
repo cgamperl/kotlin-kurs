@@ -3,7 +3,7 @@ package demo
 fun main() {
     println(
         """
-        Block 2 – Language basics II
+        Block 2 - Language basics II
         ============================
         D01GenericsKt          generics, in/out variance, where, reified
         D02EnumClassesKt       enums with properties, entries, exhaustive when

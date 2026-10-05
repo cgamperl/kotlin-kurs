@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 4 – the wrap-up exercise: a device inventory.
+ * Exercise 4 - the wrap-up exercise: a device inventory.
  *
  * Everything from block 1 in one piece: value class, data class with
  * default arguments, nullability, `by lazy`, `when` and visibility.
@@ -35,7 +35,7 @@ data class InventoryDevice(
 class Inventory(private val devices: List<InventoryDevice>) {
 
     /**
-     * Exercise 4a – `by lazy`
+     * Exercise 4a - `by lazy`
      *
      * A report in exactly this format:
      *
@@ -54,7 +54,7 @@ class Inventory(private val devices: List<InventoryDevice>) {
     }
 
     /**
-     * Exercise 4b – nullability
+     * Exercise 4b - nullability
      *
      * Looks up a device. Returns null when the id is unknown.
      *
@@ -65,7 +65,7 @@ class Inventory(private val devices: List<InventoryDevice>) {
     }
 
     /**
-     * Exercise 4c – nullability with a default
+     * Exercise 4c - nullability with a default
      *
      * Returns the location of a device. When the device is unknown OR has
      * no location recorded, the result is "unassigned".
@@ -78,7 +78,7 @@ class Inventory(private val devices: List<InventoryDevice>) {
     }
 
     /**
-     * Exercise 4d – `when` as an expression
+     * Exercise 4d - `when` as an expression
      *
      * Rates the state of a device by its utilisation:
      *
@@ -93,7 +93,7 @@ class Inventory(private val devices: List<InventoryDevice>) {
     }
 
     /**
-     * Exercise 4e – `when` over an enum
+     * Exercise 4e - `when` over an enum
      *
      * Maps a device class to a department:
      *

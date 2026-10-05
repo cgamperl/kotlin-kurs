@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 5 – Sealed classes.
+ * Demo 5 - Sealed classes.
  *
  * An enum says "one out of this fixed set of VALUES".
  * A sealed class says "one out of this fixed set of TYPES" - and each of

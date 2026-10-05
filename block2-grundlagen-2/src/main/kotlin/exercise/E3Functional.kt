@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 3 – functional programming: evaluating telemetry.
+ * Exercise 3 - functional programming: evaluating telemetry.
  *
  * Every task can be solved without a single loop and without `var`. If you
  * find yourself needing a loop, there is almost certainly a matching

@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 2 – Nullability.
+ * Demo 2 - Nullability.
  *
  * The core statement: the TYPE says whether null is possible. `String` and
  * `String?` are two different types, and the compiler does not negotiate.

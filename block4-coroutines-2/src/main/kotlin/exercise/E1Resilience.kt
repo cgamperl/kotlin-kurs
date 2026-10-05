@@ -4,7 +4,7 @@ import kotlinx.coroutines.delay
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
- * Exercise 1 – exceptions, retry and cancellation.
+ * Exercise 1 - exceptions, retry and cancellation.
  *
  * [FlakyDeviceClient] is the kind of dependency you get handed in real
  * projects: it fails now and then, and sometimes it simply does not answer.

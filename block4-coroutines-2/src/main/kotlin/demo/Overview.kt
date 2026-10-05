@@ -3,7 +3,7 @@ package demo
 fun main() {
     println(
         """
-        Block 4 – Coroutines II & practice
+        Block 4 - Coroutines II & practice
         ==================================
         Runnable demos (src/main/kotlin/demo):
           D01ExceptionHandlingKt   launch vs. async, handlers, supervisorScope

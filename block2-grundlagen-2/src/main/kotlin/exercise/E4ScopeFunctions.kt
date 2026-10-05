@@ -1,7 +1,7 @@
 package exercise
 
 /**
- * Exercise 4 – scope functions.
+ * Exercise 4 - scope functions.
  *
  * As in exercise 3 of block 1: **the tests are green from the start.**
  * The code works, it just does not use a scope function where one would
@@ -40,7 +40,7 @@ val sampleEntries = listOf(
 )
 
 /**
- * 4a – **let**
+ * 4a - **let**
  *
  * The null check with an intermediate variable can be pulled together into
  * a single chain.
@@ -53,7 +53,7 @@ fun message(entry: DeviceEntry?): String {
 }
 
 /**
- * 4b – **apply**
+ * 4b - **apply**
  *
  * Create an object, configure it, return it. The intermediate variable and
  * the four repetitions of its name are unnecessary.
@@ -68,7 +68,7 @@ fun standardConfiguration(target: String): DeviceConfiguration {
 }
 
 /**
- * 4c – **with**
+ * 4c - **with**
  *
  * The same receiver in front of the dot, five times over.
  */
@@ -80,7 +80,7 @@ fun profile(entry: DeviceEntry): String {
 }
 
 /**
- * 4d – **also**
+ * 4d - **also**
  *
  * The chain is broken up only to log intermediate results. With `also` it
  * stays a chain.
@@ -101,7 +101,7 @@ fun criticalNames(entries: List<DeviceEntry>, log: MutableList<String>): List<St
 }
 
 /**
- * 4e – **run**
+ * 4e - **run**
  *
  * A computation on an object whose result is returned.
  */

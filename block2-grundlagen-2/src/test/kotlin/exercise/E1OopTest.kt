@@ -80,8 +80,8 @@ class E1OopTest {
         )
 
         assertEquals(
-            "Camera(cam-04) – maintenance every 6 months\n" +
-                "Sensor(sen-12) – maintenance every 24 months",
+            "Camera(cam-04) - maintenance every 6 months\n" +
+                "Sensor(sen-12) - maintenance every 24 months",
             overview,
         )
     }

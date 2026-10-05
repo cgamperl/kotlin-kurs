@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 1 – Generics.
+ * Demo 1 - Generics.
  *
  * Deliberately at the start of block 2: enum classes, sealed classes and
  * the whole collections API build on it.

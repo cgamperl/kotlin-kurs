@@ -3,7 +3,7 @@ package exercise
 import kotlinx.coroutines.flow.Flow
 
 /**
- * Exercise 2 – build your own Flow pipeline.
+ * Exercise 2 - build your own Flow pipeline.
  *
  * A sensor sends a stream of readings. You build the processing chain:
  * filtering, aggregating, error handling, and a terminal operator that

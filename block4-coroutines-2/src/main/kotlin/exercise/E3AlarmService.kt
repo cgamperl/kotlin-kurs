@@ -4,7 +4,7 @@ import kotlinx.coroutines.delay
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
- * Exercise 3 – write the tests yourself.
+ * Exercise 3 - write the tests yourself.
  *
  * This is the one exercise with no TODOs in the production code: the
  * service below is finished and correct. What is missing are its tests.

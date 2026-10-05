@@ -1,7 +1,7 @@
 package demo
 
 /**
- * Demo 1 – Project setup and the first file.
+ * Demo 1 - Project setup and the first file.
  *
  * The first thing to notice: this file contains NO class. In Kotlin,
  * functions and properties may live directly at the top level of a file.
