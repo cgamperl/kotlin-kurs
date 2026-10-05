@@ -49,11 +49,6 @@ Blockierende Alt-Bibliotheken coroutine-tauglich machen.
 > der Test scheitert. Das ist genau der Fehler, den man in Produktion erst
 > merkt, wenn das UI steht.
 
-> **Ehrlich gesagt:** `Dispatchers.IO` und `Dispatchers.Default` teilen sich
-> denselben Thread-Pool, die Threadnamen unterscheiden sich also nicht. Kein
-> Test kann die Wahl in 2c prüfen – sie ist eine Designentscheidung, und der
-> Aufgabentext erklärt, warum sie trotzdem zählt.
-
 ### Übung 3 (frei) – Monitoring-Dashboard (`E3Dashboard.kt`)
 
 Drei Quellen je Gerät, eine davon darf zu langsam sein.
