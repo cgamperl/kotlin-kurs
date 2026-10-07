@@ -133,6 +133,14 @@ Telemetrie-Auswertung mit allem aus Block 2.
 - **5d** `reportLine` – erschöpfendes `when`
 - **5e** `analysisPerDevice` – alles zusammen
 
+## Musterlösungen
+
+`solutions/src/main/kotlin/block2/`
+
+```bash
+./gradlew :solutions:test --tests "block2.*"
+```
+
 ## Weiterführend
 
 `CHEATSHEET.md` – Kotlin ↔ C# ↔ C++ zu allen Themen dieses Blocks.

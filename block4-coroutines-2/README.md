@@ -86,11 +86,21 @@ Abzudecken sind:
 | `raiseAll` | nur ausgelöste Alarme, Eingabereihenfolge, leere Map |
 
 Diese Übung wird **nicht automatisch bewertet** – das geht bei einer
-Testaufgabe nicht sinnvoll.
+Testaufgabe nicht sinnvoll. Die Musterlösung
+(`solutions/src/test/kotlin/block4/S3AlarmServiceTest.kt`) dient als Vergleich
+und zeigt, wie eine Test-Suite strukturiert werden kann.
 
 ### Übung 4 – Praxisprojekt
 
 Siehe `praxisprojekt/README.md`.
+
+## Musterlösungen
+
+`solutions/src/main/kotlin/block4/`
+
+```bash
+./gradlew :solutions:test --tests "block4.*"
+```
 
 ## Weiterführend
 

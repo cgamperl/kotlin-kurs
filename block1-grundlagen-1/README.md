@@ -97,6 +97,15 @@ Alles aus Block 1 in einem Stück.
 Der Test `computes the report only once` prüft mit `assertSame`, dass
 tatsächlich `by lazy` verwendet wurde und nicht ein `get()`.
 
+## Musterlösungen
+
+`solutions/src/main/kotlin/block1/` – jede Lösung ist kommentiert und erklärt,
+warum sie so aussieht, wie sie aussieht.
+
+```bash
+./gradlew :solutions:test --tests "block1.*"
+```
+
 ## Weiterführend
 
 `CHEATSHEET.md` in diesem Ordner: Gegenüberstellung Kotlin ↔ C# ↔ C++ zu

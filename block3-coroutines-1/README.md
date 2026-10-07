@@ -65,6 +65,14 @@ Drei Quellen je Gerät, eine davon darf zu langsam sein.
 > Der Test `does not wait longer than the timeout allows` deckt das auf.
 > Die Lösung: Das Timeout gehört **in** den `async`.
 
+## Musterlösungen
+
+`solutions/src/main/kotlin/block3/`
+
+```bash
+./gradlew :solutions:test --tests "block3.*"
+```
+
 ## Weiterführend
 
 `CHEATSHEET.md` – `suspend` gegen `async`/`await` gegen `std::async`.

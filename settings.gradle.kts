@@ -18,4 +18,5 @@ include(
     "block2-grundlagen-2",
     "block3-coroutines-1",
     "block4-coroutines-2",
+    "solutions",
 )
